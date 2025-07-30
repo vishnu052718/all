@@ -12,13 +12,13 @@ const CredOperation= () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editingIndex !== null) {
-      // Update
+      
       const updated = [...data];
       updated[editingIndex] = formData;
       setData(updated);
       setEditingIndex(null);
     } else {
-      // Create
+      
       setData([...data, formData]);
     }
     setFormData({ name: "", email: "" });
